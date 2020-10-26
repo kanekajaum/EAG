@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	  <head>
+	    <!-- Meta tags Obrigatórias -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+	<!--  -->
+	<!-- 	<link rel="stylesheet" href="demo.css"> -->
+	    <script src="jquery.min.js"></script>
+	    <script src="dist/jquery.flipster.min.js"></script>
+	    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+		
+	<!--  -->
+
+
+	    <title>Lennon Gesso decoração</title>
+	</head>
+	<body>
+
+
+		<nav >
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fa fa-bars"></i>
+			</label>
+			<label class="logo">Lennon</label>
+			<ul>
+				<li><a href="#empresa" onclick="myFunction()" class="efeito-btn"> <strong>Empresa</strong></a></li>
+				<li><a href="" data-toggle="modal" data-target="#galeria" onclick="myFunction()" class="efeito-btn"><strong>Galeria</strong></a></li>
+				<li><a href="#contatos" onclick="myFunction()" class="efeito-btn"><strong>Contatos</strong></a></li>
+				<li><a href="" data-toggle="modal" data-target="#orcamento" onclick="myFunction()" class="efeito-btn"><strong>Orçamento</strong></a></li>
+			</ul>
+
+		</nav>
+			
+		<!-- final nav -->
+
+	<!-- modal -->
+	<!-- Botão para acionar modal -->
+
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#galeria">
+	  Abrir modal de demonstração
+	</button>
+	 -->
+	<!-- Modal -->
+	<!-- Botão para acionar modal -->
+
+	<!-- Modal -->
+
+	<div class="modal fade bd-example-modal-lg" style="height:100%;" id="galeria" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" >
+
+	    <div class="modal-content">
+	   		<div class="modal-header">
+		        <h5 class="modal-title">Galeria</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	      </div>
+		    <div class="modal-body">
+		        
+
+		    	
+			<div class="col-md-12">
+			  	<div class="row" id="img_auto" ></div>
+
+
+		    </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+
+	<!-- fim modal -->
+
+	<!-- Modal -->
+
+	<div class="modal fade bd-example-modal-lg" id="orcamento" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" style="font-family: font-family: 'Quicksand', sans-serif;">
+	  <div class="modal-dialog ">
+
+	    <div class="modal-content">
+	   		<div class="modal-header">
+		        <h5 class="modal-title">Orçamento Online</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	      </div>
+		    <div class="modal-body">
+<!-- 		    <h3 style="text-align: center;">Em desenvolvimento</h3>
+		    <img src="img/desenvolvimento.gif" class="img-fluid"> -->
+		    <div class="container">
+			    <form id="formulario_orc">
+				    	Largura<br>
+				    <input type="number" id="n1" class="form-control">
+				    <div style="text-align: center;"><i class="fa fa-times fa-3x" aria-hidden="true"></i></div>
+				    	Comprimento<br>
+				    <input type="number" id="n2" class="form-control">
+				    	<br>
+				    <input type="button" class="btn btn-success btn-lg  efeito-btn btn-lg btn-block" id="calculador" onclick="javascript:calculoMedia();" value="Calcular" >
+				</form>
+				<hr>
+				<p class=" text-success border border-success mx-auto" id="calculo" style="text-align: center;" data-toggle="tooltip" data-placement="bottom" title="Tooltip na parte inferior"></p>
+				<hr>
+				<div  style="float: center;">
+					<a href="https://wa.me/556798188-2584?text=Olá%20Lennon" id="whatsapp" class="btn btn-success whatsapp efeito-btn  btn-lg btn-block"><i class="fa fa-whatsapp fa-2x"></i> Chamar no WhatsApp </a>
+				</div>
+				
+			</div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+
+	<!-- fim modal -->
+
+	<!--  -->
+	<div  class="fixed-bottom float-right">
+		<div class="float-right m-3">
+		<a href="https://wa.me/556798188-2584?text=Olá%20Lennon" class="btn btn-success efeito-btn"><i class="fa fa-whatsapp fa-2x"></i></a>
+		<!-- <a href="https://wa.me/556798188-2584?text=Olá%20Lennon">Chamar no WhatsApp</a> -->
+		</div>
+	</div>
+
+	<!--  -->
+
+		<section>
+
+			<div class="carrosel col-md">
+
+				<br><br>
+				<h1 class="h1">Lennon Gesso e decoração </h1><br><br>
+
+		<!--<div class="col-md">
+				<div id="coverflow">
+			        <ul class="flip-items">
+			            <li data-flip-title="Red">
+			                <img src="img/text1.gif">
+			            </li>
+			            <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+			                <img src="img/text2.gif">
+			             </li>
+			            <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+			                <img src="img/text3.gif">
+			            </li>
+			            <li data-flip-title="Daisy Bush" data-flip-category="Purples">
+			                <img src="img/text4.gif">
+			            </li>
+			            <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
+			                <img src="img/text5.gif">
+			            </li>
+			            <li data-flip-title="Dodger Blue" data-flip-category="Blues">
+			                <img src="img/text6.gif">
+			            </li>
+			            <li data-flip-title="Cyan" data-flip-category="Blues">
+			                <img src="img/text7.gif">
+			            </li>
+			            <li data-flip-title="Robin's Egg" data-flip-category="Blues">
+			                <img src="img/text8.gif">
+			            </li>
+			            <li data-flip-title="Deep Sea" data-flip-category="Greens">
+			                <img src="img/text9.gif">
+			            </li>
+			            <li data-flip-title="Apple" data-flip-category="Greens">
+			                <img src="img/text10.gif">
+			            </li>
+			        </ul>
+			    </div>
+				<script>
+				    var coverflow = $("#coverflow").flipster();
+				</script>
+			</div > -->
+					
+				</div>
+			</section>
+
+
+			<br>
+				<div id="empresa" style="text-align: center;color:#cf5852;font-family: 'Quicksand', sans-serif;">
+					<h1 class="empresa-h1">Transforme se seu ambiente com praticidade, rapidez e confiança.</h1>
+				</div>
+
+			<br>
+			<section>
+				<div class="container"  >
+						<br>
+
+						<br>
+						<div class="row">
+							<div class="img col-md"><img style="width: 100%;height: 100%;" src="img/whatsaap/img2.jpeg"></div>	
+							<div class="text col-md">
+								<h1 style="color:#cf5852;">Empresa</h1>
+								<p>A anos prestando serviços na região de Campo Grande e proximidades, profissionais capacitados e competentes para tornar do seu espaço um lugar elegante e agradavel.</p>
+							</div>
+						</div>
+							<br>
+						<div class="row">
+							
+							<div class="text col-md">
+								<h1 style="color:#cf5852;">Missão</h1>
+								<p>Proporcionando ambientes acolhedores e criativos, para que seu conforto e bem estar de cada cliente.</p>
+							</div>
+								
+
+							<div class="img col-md"><img style="width: 100%;height: 100%;" src="img/whatsaap/img1.jpeg"></div>	
+						</div>
+							<br><br>
+
+						<div class="text col-md text-center">
+								<h1 style="color:#cf5852;">Valores</h1>
+								<p>Trabalhando com responsabilidade social para que cada local tenha seu <strong> impacto ambiental seja minimo</strong> e <strong> sua satisfação maxima</strong>.</p>
+						</div>
+
+				
+
+<div class="carousel_footer mx-auto">
+	
+
+
+	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  	<div class="carousel-inner" id="img_carousel_footer">
+    	<div class="carousel-item active" >
+      		<img class="d-block w-100" src="img/whatsaap/mosaico1.jpg"alt="First slide">
+    	</div>
+  	</div>
+  		<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  		</a>
+  		<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+ 		</a>
+	</div>
+
+</div>
+
+			<!--  -->
+
+
+		</div>
+		</section>
+		
+		<!-- footer -->
+		
+		<div class="footer" id="contatos">
+			<div class="container">
+			<div class="row p-3">		
+				<div class="col-md">
+					<h2>CONTATO</h2>
+					<br>
+					<a href="https://api.whatsapp.com/send?phone=+55(67)98188-2584"><i class="fa fa-whatsapp fa-2x"></i> Fale com Lennon</a>
+						<br><br>
+
+					<a href="https://m.facebook.com/100008149299571/albums/1382371325377831/"><i class="fa fa-facebook fa-2x"></i> Lennon Gesso e Decorações</a>
+						<br><br>
+					<a href=""><i class="fa fa-instagram fa-2x"></i> Lennon Gesso e Decorações</a>
+						<br><br>
+					<a href="Lennonconstrucaoaseco@outlook.com"><i class="fa fa-envelope-o fa-2x"></i> Lennonconstrucaoaseco@outlook.com</a>
+						<br><br>
+					<p>Atendimento: Campo grande e Região MS.</p>
+				</div>
+				<div class="col-md footer_form">
+					<h6>Envie um E-mail:</h6>
+					<br>
+
+					<form
+					  action="https://formspree.io/myynbzgp"
+					  method="POST">
+					  <label>
+					  	Nome:<br>
+					  <input type="text" name="name">
+					  </label>
+					  	<br>
+					  <label>
+					    E-mail:<br>
+					    <input type="text" name="_replyto">
+					  </label>
+					  	<br>
+					  <label>
+					    Mensagem:<br>
+					    <textarea name="message"></textarea>
+					  </label>
+					  	<br>
+					  <button class="efeito-btn" type="submit"><strong>Enviar</strong></button>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+	    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	    
+
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+
+	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	    <script src="js/index.js" ></script>
+
+
+	</body>
+</html>

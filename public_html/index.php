@@ -340,46 +340,32 @@
 
       <!-- Carossel Inicio -->
 
-          <div class="serv ">
-                <div class="container">
-                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding-bottom: 10%;">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="w-90 h-100 mx-auto img-fluid" src="img/carossel/ca_6.jpeg" alt="Primeiro Slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class=" w-90 h-100 mx-auto img-fluid" src="img/carossel/ca_2.jpeg" alt="Segundo Slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="w-90 h-100 mx-auto img-fluid" src="img/carossel/ca_3.jpeg" alt="Terceiro Slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="w-90 h-100 mx-auto img-fluid" src="img/carossel/ca_4.jpeg" alt="Quarto Slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="w-90 h-100 mx-auto img-fluid" src="img/carossel/ca_5.jpeg" alt="Quinto Slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Próximo</span>
-                    </a>
-                  </div> 
-                  <br><br>
-        	   	  </div>
-              </div>
-          </div>
+        <div class="">
+              <div class="container">
+                <div class="row mx-auto" id="img_painel">
+                    <!--  -->
+                
+                <?php
+
+                  $pasta = 'img/carossel/';
+                  $arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.jpeg}", GLOB_BRACE);
+                  foreach($arquivos as $img){
+                     echo '<div class="col-md-4">
+                                <div class="card  rounded">
+                                    <div class="card-body">
+                                        <img src="'.$img.'" class="img-fluid" alt="Responsive image">          
+                                    </div>
+                                </div>
+                            </div>';
+
+                  }
+
+                ?>
+
+      	   	  </div>
+            </div>
+        </div>
+      
       <!-- Carossel fim -->
       <!-- area cliente -->
           <div class="area_cliente container" id="area_cliente" style="padding-top: 7%;">
@@ -609,10 +595,10 @@
           <br><br>
           <span><i class="material-icons">phone</i>(67) 3342-0978 </span><br><br>
           <span><i class="material-icons"><img src="img/whatsapp.png" width="20"></i><a style="text-decoration:none; color: black" href="https://api.whatsapp.com/send?phone=+55(67)99245-8052" target="_blank"> (67) 99245-8052</a></span><br><br>
-          <span><i><img src="img/inst.png"></i><a style="color: white;" href="https://instagram.com/eag.consultoria?igshid=132loa93wh036"> EAG Consultoria</a></span>
+          <span><i><img src="img/inst.png"></i><a style="color: #000;" href="https://instagram.com/eag.consultoria?igshid=132loa93wh036"> EAG Consultoria</a></span>
           <br><br>
           <span><i class="material-icons">email</i>
-          rodrigo.bento<span style="font-size: 16px;" class="span">@eagconsultoria</span>.com.br</span>
+          rodrigo.bento@eagconsultoria.com.br</span>
           <br><br>
           <p><i class="material-icons">location_on</i> AV. COSTA E SILVA, 1059 - VILA PROGRESSO <br>
           Sala Superior Anexo ao Posto FIC <br>
@@ -645,7 +631,7 @@
       </article>
     </div>
     <div class="footer-bottom">
-      &copy; EAGConsultoria | Todos os direitos reservados. | <a class="sup" href="#">Suporte</a>
+      &copy; EAGConsultoria | Todos os direitos reservados. | <a class="sup" href="repositorio.php">Suporte</a>
     </div>
   </div>
   

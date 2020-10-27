@@ -1,0 +1,6 @@
+
+git commit -m "primeiro commit"
+
+git add .
+git commit -m "digite sua mensagem de commit aqui"
+git push origin master
